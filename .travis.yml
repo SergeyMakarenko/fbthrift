@@ -7,10 +7,10 @@ compiler:
   - gcc
 
 install:
-  - ./thrift/build/deps_ubuntu_14.04.sh
+  - alias make="make -j" && ./thrift/build/deps_ubuntu_14.04.sh
 
 script:
-  - ./thrift/build/travis/install.sh
+  - alias make="make -j" && ./thrift/build/travis/install.sh
 
 notifications:
   email:
